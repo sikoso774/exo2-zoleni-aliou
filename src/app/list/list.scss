@@ -3,7 +3,7 @@
   text-align: center;
 }
 
-.liste-films {
+.movie-list {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,21 +13,21 @@
   margin: 1rem auto;
 }
 
-.liste-films a {
+.movie-list a {
   text-decoration: none;
   font-size: 1.1rem;
   color: #1a4d8f;
 }
 
-.liste-films a:hover {
+.movie-list a:hover {
   text-decoration: underline;
 }
 
-.film-detail {
+.movie-detail {
   margin-top: 2rem;
 }
 
-.film-detail img {
+.movie-detail img {
   max-width: 300px;
   width: 100%;
   height: auto;
