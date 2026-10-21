@@ -1,0 +1,16 @@
+<h2>Our 5 selected movies</h2>
+
+<ul class="movie-list">
+  @for (movie of movies; track movie.title) {
+    <li>
+      <a href="#" (click)="select_movie(movie, $event)">{{ movie.title }}</a>
+    </li>
+  }
+</ul>
+
+@if (selectedMovie(); as movie) {
+  <div class="movie-detail">
+    <h3>{{ movie.title }}</h3>
+    <img [src]="movie.poster" [alt]="movie.title" />
+  </div>
+}

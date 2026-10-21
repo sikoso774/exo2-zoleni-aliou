@@ -1,0 +1,36 @@
+:host {
+  display: block;
+  text-align: center;
+}
+
+.movie-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 1rem auto;
+}
+
+.movie-list a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #1a4d8f;
+}
+
+.movie-list a:hover {
+  text-decoration: underline;
+}
+
+.movie-detail {
+  margin-top: 2rem;
+}
+
+.movie-detail img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
