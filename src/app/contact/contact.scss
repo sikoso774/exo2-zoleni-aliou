@@ -1,7 +1,10 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
 :host {
   display: flex;
   justify-content: center;
-  padding: 1rem 1rem 4rem;
+  padding: 1.5rem 1rem;
 }
 
 .contact-form {
@@ -11,20 +14,57 @@
   width: 100%;
   max-width: 400px;
 
+  h2 {
+    margin: 0;
+    color: $gold;
+    text-align: center;
+  }
+
   label {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+    color: $muted;
+    font-size: 0.9rem;
   }
 
   .checkbox {
     flex-direction: row;
     align-items: center;
+    color: $text;
+
+    input {
+      accent-color: $gold;
+    }
+  }
+
+  input[type='text'],
+  input[type='number'],
+  textarea {
+    padding: 0.5rem 0.75rem;
+    background: $surface;
+    color: $text;
+    font: inherit;
+    border: 1px solid $border-input;
+    border-radius: $radius;
+
+    &:focus {
+      outline: none;
+      border-color: $gold;
+    }
+
+    &.ng-touched.ng-invalid {
+      border-color: $danger;
+    }
   }
 
   .error {
     margin: -0.5rem 0 0;
-    color: #b00020;
+    color: $danger;
     font-size: 0.85rem;
+  }
+
+  button {
+    @include button-gold;
   }
 }

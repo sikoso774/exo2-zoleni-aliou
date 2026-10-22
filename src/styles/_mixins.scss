@@ -1,0 +1,39 @@
+@use 'variables' as *;
+
+@mixin button-base {
+  font: inherit;
+  font-size: 0.9rem;
+  border-radius: $radius;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s, opacity 0.15s;
+}
+
+@mixin button-gold {
+  @include button-base;
+  background: $gold;
+  color: $bg;
+  border: 1px solid $gold;
+  font-weight: 500;
+
+  &:hover:not(:disabled) {
+    background: $gold-hover;
+  }
+
+  &:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+}
+
+@mixin button-outline {
+  @include button-base;
+  background: transparent;
+  color: $gold;
+  border: 1px solid $gold;
+
+  &:hover {
+    background: $gold;
+    color: $bg;
+  }
+}
