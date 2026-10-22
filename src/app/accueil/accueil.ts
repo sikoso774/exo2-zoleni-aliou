@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
   imports: [],
-  selector: 'app-home',
-  styleUrl: './home.scss',
-  templateUrl: './home.html',
+  selector: 'app-accueil',
+  styleUrl: './accueil.scss',
+  templateUrl: './accueil.html',
 })
-export class Home {
+export class Accueil {
   readonly memeSrc = 'images/meme.gif';
 }

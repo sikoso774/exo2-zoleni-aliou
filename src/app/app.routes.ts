@@ -1,14 +1,14 @@
 import { Routes } from '@angular/router';
-import { Home } from './home/home';
-import { List } from './list/list';
-import { Management } from './management/management';
+import { Accueil } from './accueil/accueil';
+import { Liste } from './liste/liste';
+import { Gestion } from './gestion/gestion';
 import { Contact } from './contact/contact';
 
 export const routes: Routes = [
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
-    { path: 'home', component: Home },
-    { path: 'list', component: List },
-    { path: 'management', component: Management },
+    { path: '', redirectTo: 'accueil', pathMatch: 'full' },
+    { path: 'accueil', component: Accueil },
+    { path: 'liste', component: Liste },
+    { path: 'gestion', component: Gestion },
     { path: 'contact', component: Contact },
-    { path: '**', redirectTo: 'home' }
+    { path: '**', redirectTo: 'accueil' }
 ];

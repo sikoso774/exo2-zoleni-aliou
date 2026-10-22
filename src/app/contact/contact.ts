@@ -54,6 +54,6 @@ export class Contact {
     const { firstName, lastName, age, email, comment } = this.form.getRawValue();
     this.store.save({ firstName, lastName, age, email, comment });
     alert('Le formulaire est valide');
-    this.router.navigate(['/home']);
+    this.router.navigate(['/accueil']);
   }
 }

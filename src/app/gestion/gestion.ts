@@ -3,10 +3,10 @@ import { ContactStore } from '../contact-store';
 
 @Component({
   imports: [],
-  selector: 'app-management',
-  styleUrl: './management.scss',
-  templateUrl: './management.html',
+  selector: 'app-gestion',
+  styleUrl: './gestion.scss',
+  templateUrl: './gestion.html',
 })
-export class Management {
+export class Gestion {
   readonly lastMessage = inject(ContactStore).lastMessage;
 }
