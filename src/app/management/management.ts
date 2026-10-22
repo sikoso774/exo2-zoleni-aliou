@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ContactStore } from '../contact-store';
 
 @Component({
   imports: [],
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
   templateUrl: './management.html',
 })
 export class Management {
+  readonly lastMessage = inject(ContactStore).lastMessage;
 }

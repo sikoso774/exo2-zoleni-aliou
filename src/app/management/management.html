@@ -1,1 +1,23 @@
-<p>management works!</p>
+@if (lastMessage(); as message) {
+  <section class="last-message">
+    <h2>Dernier formulaire de contact</h2>
+    <dl>
+      <dt>Prénom</dt>
+      <dd>{{ message.firstName }}</dd>
+      <dt>Nom</dt>
+      <dd>{{ message.lastName }}</dd>
+      @if (message.age !== null) {
+        <dt>Âge</dt>
+        <dd>{{ message.age }}</dd>
+      }
+      @if (message.email) {
+        <dt>Email</dt>
+        <dd>{{ message.email }}</dd>
+      }
+      <dt>Commentaire</dt>
+      <dd>{{ message.comment }}</dd>
+    </dl>
+  </section>
+} @else {
+  <p class="not-found">404 Not found</p>
+}
