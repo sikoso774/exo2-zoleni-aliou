@@ -1,0 +1,13 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding-bottom: 4rem;
+}
+
+.meme {
+  max-width: 90%;
+  max-height: 60vh;
+  height: auto;
+}

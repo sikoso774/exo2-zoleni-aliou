@@ -1,1 +1,40 @@
-<p>contact works!</p>
+<form class="contact-form" [formGroup]="form" (ngSubmit)="submit()">
+  <h2>Contact</h2>
+
+  <label>
+    Prénom
+    <input type="text" formControlName="firstName" />
+  </label>
+
+  <label>
+    Nom
+    <input type="text" formControlName="lastName" />
+  </label>
+
+  <label>
+    Âge
+    <input type="number" min="0" formControlName="age" />
+  </label>
+
+  <label class="checkbox">
+    <input type="checkbox" formControlName="hide" />
+    Masquer
+  </label>
+
+  @if (!hidden) {
+    <label>
+      Email
+      <input type="text" formControlName="email" />
+    </label>
+    @if (form.controls.email.touched && form.controls.email.errors?.['missingAt']) {
+      <p class="error">L&rsquo;email doit contenir un &#64;</p>
+    }
+  }
+
+  <label>
+    Commentaire
+    <textarea rows="5" formControlName="comment"></textarea>
+  </label>
+
+  <button type="submit" [disabled]="form.invalid">Envoyer</button>
+</form>

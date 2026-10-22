@@ -1,0 +1,25 @@
+:host {
+  display: block;
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
+.last-message dl {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  gap: 0.5rem 1rem;
+  text-align: left;
+}
+
+.last-message dt {
+  font-weight: bold;
+}
+
+.last-message dd {
+  margin: 0;
+}
+
+.not-found {
+  font-size: 2rem;
+  margin-top: 3rem;
+}

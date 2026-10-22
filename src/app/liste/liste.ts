@@ -7,11 +7,11 @@ interface Movie {
 
 @Component({
   imports: [],
-  selector: 'app-list',
-  styleUrl: './list.scss',
-  templateUrl: './list.html',
+  selector: 'app-liste',
+  styleUrl: './liste.scss',
+  templateUrl: './liste.html',
 })
-export class List {
+export class Liste {
   movies: Movie[] = [
     { title: 'Avatar', poster: 'images/Avatar-poster-teaser.png' },
     { title: 'Catch Me if you can', poster: 'images/catch-me-if-u-can.png' },
