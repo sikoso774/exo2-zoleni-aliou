@@ -16,7 +16,7 @@
 
   h2 {
     margin: 0;
-    color: $gold;
+    color: $accent;
     text-align: center;
   }
 
@@ -34,7 +34,7 @@
     color: $text;
 
     input {
-      accent-color: $gold;
+      accent-color: $accent;
     }
   }
 
@@ -50,7 +50,7 @@
 
     &:focus {
       outline: none;
-      border-color: $gold;
+      border-color: $accent;
     }
 
     &.ng-touched.ng-invalid {
@@ -65,6 +65,6 @@
   }
 
   button {
-    @include button-gold;
+    @include button-accent;
   }
 }

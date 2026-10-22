@@ -9,15 +9,16 @@
   transition: background-color 0.15s, color 0.15s, opacity 0.15s;
 }
 
-@mixin button-gold {
+@mixin button-accent {
   @include button-base;
-  background: $gold;
-  color: $bg;
-  border: 1px solid $gold;
+  background: $accent-fill;
+  color: $on-accent;
+  border: 1px solid $accent-fill;
   font-weight: 500;
 
   &:hover:not(:disabled) {
-    background: $gold-hover;
+    background: $accent-fill-hover;
+    border-color: $accent-fill-hover;
   }
 
   &:disabled {
@@ -29,11 +30,12 @@
 @mixin button-outline {
   @include button-base;
   background: transparent;
-  color: $gold;
-  border: 1px solid $gold;
+  color: $accent;
+  border: 1px solid $accent;
 
   &:hover {
-    background: $gold;
-    color: $bg;
+    background: $accent-fill;
+    border-color: $accent-fill;
+    color: $on-accent;
   }
 }
