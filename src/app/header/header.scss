@@ -10,10 +10,14 @@ nav {
 }
 
 .brand {
+  display: flex;
   margin-right: auto;
-  color: $gold;
-  font-size: 1.1rem;
-  font-weight: 500;
+}
+
+.brand img {
+  display: block;
+  height: 36px;
+  width: auto;
 }
 
 ul {
@@ -24,7 +28,7 @@ ul {
   list-style: none;
 }
 
-a {
+ul a {
   padding-bottom: 2px;
   color: $muted;
   text-decoration: none;
@@ -35,7 +39,7 @@ a {
   }
 
   &.active {
-    color: $gold;
-    border-bottom-color: $gold;
+    color: $accent;
+    border-bottom-color: $accent;
   }
 }
