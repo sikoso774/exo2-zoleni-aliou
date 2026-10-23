@@ -47,7 +47,7 @@ export class Contact {
     return this.form.controls.hide.value;
   }
 
-  submit(): void {
+public submit(): void {
     if (this.form.invalid) {
       return;
     }
