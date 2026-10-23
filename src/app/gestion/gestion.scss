@@ -1,25 +1,42 @@
+@use '../../styles/variables' as *;
+
 :host {
   display: block;
+  padding: 1.5rem 1rem;
   text-align: center;
-  padding-bottom: 4rem;
 }
 
-.last-message dl {
-  display: inline-grid;
-  grid-template-columns: auto auto;
-  gap: 0.5rem 1rem;
-  text-align: left;
-}
+.last-message {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  background: $surface;
+  border: 1px solid $border;
+  border-radius: $radius-lg;
 
-.last-message dt {
-  font-weight: bold;
-}
+  h2 {
+    margin-top: 0;
+    color: $accent;
+  }
 
-.last-message dd {
-  margin: 0;
+  dl {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0.5rem 1.25rem;
+    margin: 0;
+    text-align: left;
+  }
+
+  dt {
+    color: $muted;
+  }
+
+  dd {
+    margin: 0;
+  }
 }
 
 .not-found {
-  font-size: 2rem;
   margin-top: 3rem;
+  color: $muted;
+  font-size: 2rem;
 }

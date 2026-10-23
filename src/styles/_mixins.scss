@@ -1,0 +1,41 @@
+@use 'variables' as *;
+
+@mixin button-base {
+  font: inherit;
+  font-size: 0.9rem;
+  border-radius: $radius;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s, opacity 0.15s;
+}
+
+@mixin button-accent {
+  @include button-base;
+  background: $accent-fill;
+  color: $on-accent;
+  border: 1px solid $accent-fill;
+  font-weight: 500;
+
+  &:hover:not(:disabled) {
+    background: $accent-fill-hover;
+    border-color: $accent-fill-hover;
+  }
+
+  &:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+}
+
+@mixin button-outline {
+  @include button-base;
+  background: transparent;
+  color: $accent;
+  border: 1px solid $accent;
+
+  &:hover {
+    background: $accent-fill;
+    border-color: $accent-fill;
+    color: $on-accent;
+  }
+}

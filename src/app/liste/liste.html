@@ -3,7 +3,7 @@
 <ul class="movie-list">
   @for (movie of movies; track movie.title) {
     <li>
-      <a href="#" (click)="select_movie(movie, $event)">{{ movie.title }}</a>
+      <a href="#" [class.active]="selectedMovie()?.title === movie.title" (click)="select_movie(movie, $event)">{{ movie.title }}</a>
     </li>
   }
 </ul>
