@@ -16,3 +16,5 @@ export class ContactStore {
     this.lastMessage.set(message);
   }
 }
+
+// service dans un dossier service.

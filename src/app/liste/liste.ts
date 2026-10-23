@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 
-interface Movie {
+interface Movie { // fichier/ dossier interface
   title: string;
   poster: string;
 }
